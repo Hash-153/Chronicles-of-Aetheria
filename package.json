@@ -1,0 +1,33 @@
+{
+  "name": "aether-engine",
+  "version": "1.0.0",
+  "description": "Comprehensive, clean-room 2D/Isometric Game Engine & Action-RPG in pure TypeScript",
+  "private": true,
+  "type": "module",
+  "main": "src/main.ts",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "node --experimental-strip-types tests/run_all_tests.ts",
+    "benchmark": "node --experimental-strip-types benchmarks/run_benchmarks.ts",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "game-engine",
+    "game-dev",
+    "ecs",
+    "physics-2d",
+    "webgl2",
+    "audio-synth",
+    "procedural-generation",
+    "action-rpg"
+  ],
+  "author": "Aether Development Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}

@@ -1,0 +1,44 @@
+# Environment and Credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.secret
+credentials.json
+
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build Outputs
+dist/
+build/
+out/
+.vite/
+*.tsbuildinfo
+
+# Logs & Diagnostics
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Coverage and Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# IDE & OS Artifacts
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db

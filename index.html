@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chronicles of Aetheria - AetherEngine</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+    body, html {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0b0e14;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e2e8f0;
+    }
+    #game-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #1a202c 0%, #080a0f 100%);
+    }
+    #canvas-render-target {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+    #ui-root {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    #debug-hud {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 10px 14px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 13px;
+      color: #38bdf8;
+      pointer-events: auto;
+      z-index: 100;
+      backdrop-filter: blur(4px);
+    }
+    .hud-line {
+      margin-bottom: 4px;
+    }
+    .hud-val {
+      color: #facc15;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="canvas-render-target"></canvas>
+    <div id="ui-root"></div>
+    <div id="debug-hud">
+      <div class="hud-line">AETHER ENGINE <span class="hud-val">v1.0.0</span></div>
+      <div class="hud-line">FPS: <span id="hud-fps" class="hud-val">60</span> | Frame: <span id="hud-frame-time" class="hud-val">16.6ms</span></div>
+      <div class="hud-line">Entities: <span id="hud-entities" class="hud-val">0</span> | Draw Calls: <span id="hud-draw-calls" class="hud-val">0</span></div>
+      <div class="hud-line">Physics Bodies: <span id="hud-bodies" class="hud-val">0</span> | Collisions: <span id="hud-collisions" class="hud-val">0</span></div>
+      <div class="hud-line">Biome: <span id="hud-biome" class="hud-val">Aetherial Highlands</span></div>
+      <div class="hud-line">Mode: <span id="hud-mode" class="hud-val">Play (Press [F1] Editor, [F2] Profiler, [F3] Bounds)</span></div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
