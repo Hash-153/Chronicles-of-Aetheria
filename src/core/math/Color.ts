@@ -118,6 +118,10 @@ export class Color {
     return `rgba(${ir},${ig},${ib},${fa})`;
   }
 
+  public toRgbaString(): string {
+    return this.toRGBA();
+  }
+
   public toHex(): string {
     const ir = Math.round(MathUtils.clamp01(this.r) * 255).toString(16).padStart(2, '0');
     const ig = Math.round(MathUtils.clamp01(this.g) * 255).toString(16).padStart(2, '0');
